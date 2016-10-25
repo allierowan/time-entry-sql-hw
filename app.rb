@@ -25,10 +25,11 @@ end
 
 class Project < ActiveRecord::Base
   belongs_to :clients
+  has_many :time_entries
 end
 
 class TimeEntry < ActiveRecord::Base
-
+  belongs_to :projects
 end
 
 binding.pry
